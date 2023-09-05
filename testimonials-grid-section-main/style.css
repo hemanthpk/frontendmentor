@@ -13,17 +13,16 @@
     --Light_grayish_blue: hsl(210, 46%, 95%);
 }
 body{
+    height: fit-content;
     background-color: var(--Light_gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .container{
     width: 70vw;
     height:80vh;
     margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     display: grid;
     grid-template-areas: 
         'c1 c1 c1 c2 c5'
@@ -45,7 +44,11 @@ body{
     }
 }
 .c1{
+    position: relative;
     background-color: var(--Moderate_violet);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat:no-repeat;
+    background-position: 80% 0%;
     color: var(--White);
     grid-area: c1;
 }

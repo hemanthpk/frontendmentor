@@ -1,0 +1,112 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+:root{
+--Pale_Violet: hsl(276, 100%, 81%);
+--Moderate_Violet: hsl(276, 55%, 52%);
+--Desaturated_Dark_Violet: hsl(271, 15%, 43%);
+--Grayish_Blue: hsl(206, 6%, 79%);
+--Very_Dark_Desaturated_Violet: hsl(271, 36%, 24%);
+--Dark_Grayish_Violet: hsl(270, 7%, 64%);
+--Light_Magenta: hsl(293, 100%, 63%);
+--Light_Violet: hsl(264, 100%, 61%);
+--White: hsl(0, 0%, 100%);
+--Light_Grayish_Violet: hsl(270, 20%, 96%);
+--Very_Light_Magenta: hsl(289, 100%, 72%)
+}
+body{
+    background-color: var(--Light_Grayish_Violet);
+    width: 100vw;
+    /*height: 100vh;*/
+    overflow: hidden;
+}
+.rightshape{
+    height: 85vh;
+    width: 30vw;
+    border-bottom-left-radius: 15vw;
+    border-bottom-right-radius: 15vw;
+    position: absolute;
+    top: 0;
+    right:75%;
+    z-index: -1;
+    background-image: linear-gradient(45deg,var(--Light_Violet),var(--Light_Magenta));
+}
+.leftshape{
+    height: 85vh;
+    width: 30vw;
+    border-top-left-radius: 15vw;
+    border-top-right-radius: 15vw;
+    position: absolute;
+    bottom:0;
+    left:80%;
+    z-index: -1;
+    background-color: hsl(206, 6%, 79%,0.2);
+}
+.container{
+    margin-top: 10vh;
+    margin-left: 20vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card{
+    font-size: small;
+    width: 30vw;
+    height: 100%;
+    padding:10px;
+    background-color: var(--Light_Grayish_Violet);
+    background-clip: content-box;
+    box-shadow: inset 0 0 0 10px var(--White);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid red;
+}
+.card-header{
+    padding: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    background-image: linear-gradient(90deg,var(--Light_Violet),var(--Light_Magenta));
+}
+.card-header img{
+    border-radius: 50%;
+    width:10%;
+    height: auto;
+}
+.cardchat{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.cardchat .sent{
+    margin: 5px;
+    width: 60%;
+    padding: 1rem;
+    align-self: flex-start;
+    border-radius: 10px;
+    background-color: var(--Grayish_Blue);
+    color: var(--Moderate_Violet);
+}
+.cardchat .received{
+    margin: 5px;
+    width: 60%;
+    padding: 1rem;
+    align-self: flex-end;
+    border-radius: 10px;
+    background-color: var(--White);
+    color: var(--Desaturated_Dark_Violet);
+}
+.img>img{
+    border-radius: 10%;
+    width: 18%;
+    margin-left: 10px;
+    float: right;
+}
+.btndiv{
+    margin: 5px;
+    background-image: linear-gradient(90deg,var(--Light_Magenta),var(--Light_Violet));;
+}
