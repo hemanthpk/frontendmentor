@@ -19,7 +19,6 @@
 }
 body{
     background-color: var(--Light_Grayish_Violet);
-    width: 100vw;
     /*height: 100vh;*/
     overflow: hidden;
 }
@@ -46,26 +45,34 @@ body{
     background-color: hsl(206, 6%, 79%,0.2);
 }
 .container{
-    margin-top: 10vh;
-    margin-left: 20vw;
-    height: 80vh;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
+@media screen and (width<=400px) {
+    .container{
+        height: auto;
+        flex-flow: column nowrap;
+    }
+    .adverttext{
+        width: auto !important;
+        text-align: center;
+    }
+}
+.border{
+    width: 20rem;
+    padding: 0.8rem;
+    border-radius: 25px;
+    background-color: var(--White);
+}
 .card{
-    font-size: small;
-    width: 30vw;
-    height: 100%;
-    padding:10px;
+    font-size:x-small;
     background-color: var(--Light_Grayish_Violet);
-    background-clip: content-box;
-    box-shadow: inset 0 0 0 10px var(--White);
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    border-radius: 5px;
-    border: 1px solid red;
+    border-radius: 25px;
+    overflow: hidden;
 }
 .card-header{
     padding: 15px;
@@ -85,7 +92,7 @@ body{
 .cardchat .sent{
     margin: 5px;
     width: 60%;
-    padding: 1rem;
+    padding: 0.5rem;
     align-self: flex-start;
     border-radius: 10px;
     background-color: var(--Grayish_Blue);
@@ -94,7 +101,7 @@ body{
 .cardchat .received{
     margin: 5px;
     width: 60%;
-    padding: 1rem;
+    padding: 0.5rem;
     align-self: flex-end;
     border-radius: 10px;
     background-color: var(--White);
@@ -107,6 +114,21 @@ body{
     float: right;
 }
 .btndiv{
+    display: flex;
+    padding: 7.5px;
     margin: 5px;
     background-image: linear-gradient(90deg,var(--Light_Magenta),var(--Light_Violet));;
+}
+.msg-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--White );
+    color: var(--Grayish_Blue);
+}
+.msg-box img{
+    width:35px;
+}
+.adverttext{
+    width:40vw;
 }
