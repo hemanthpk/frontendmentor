@@ -68,7 +68,7 @@ body{
 }
 .border{
     position: relative;
-    width: 17rem;
+    width: 18rem;
     padding: 0.8rem;
     border-radius: 25px;
     background-color: var(--White);
