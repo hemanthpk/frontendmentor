@@ -15,7 +15,8 @@
 --Light_Violet: hsl(264, 100%, 61%);
 --White: hsl(0, 0%, 100%);
 --Light_Grayish_Violet: hsl(270, 20%, 96%);
---Very_Light_Magenta: hsl(289, 100%, 72%)
+--Very_Light_Magenta: hsl(289, 100%, 72%);
+--mobile:400px;
 }
 body{
     background-color: var(--Light_Grayish_Violet);
@@ -44,6 +45,11 @@ body{
     z-index: -1;
     background-color: hsl(206, 6%, 79%,0.2);
 }
+@media screen and (width<=400px) {
+    .leftshape{
+        display: none;
+    }
+}
 .container{
     height: 100vh;
     display: flex;
@@ -55,16 +61,23 @@ body{
         height: auto;
         flex-flow: column nowrap;
     }
-    .adverttext{
-        width: auto !important;
-        text-align: center;
-    }
 }
 .border{
-    width: 20rem;
+    position: relative;
+    width: 18rem;
     padding: 0.8rem;
     border-radius: 25px;
     background-color: var(--White);
+    box-shadow: 0.5rem 0.5rem 2rem rgb(0 0 0 / 20%);
+    
+}
+@media screen and (width<=400px) {
+    .border{
+        display: flex;
+        width:90%;
+        height: auto;
+        flex-flow: column nowrap;
+    }
 }
 .card{
     font-size:x-small;
@@ -74,8 +87,19 @@ body{
     border-radius: 25px;
     overflow: hidden;
 }
+.notch{
+    width:60%;
+    height:2rem;
+    background-color: var(--White);
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: auto;
+}
 .card-header{
-    padding: 15px;
+    padding-top: 25px;
+    padding: 30px 10px 10px 10px;
     display: flex;
     flex-flow: row nowrap;
     background-image: linear-gradient(90deg,var(--Light_Violet),var(--Light_Magenta));
@@ -90,7 +114,7 @@ body{
     flex-flow: column nowrap;
 }
 .cardchat .sent{
-    margin: 5px;
+    margin: 6px;
     width: 60%;
     padding: 0.5rem;
     align-self: flex-start;
@@ -99,27 +123,31 @@ body{
     color: var(--Moderate_Violet);
 }
 .cardchat .received{
-    margin: 5px;
+    margin: 6px;
     width: 60%;
     padding: 0.5rem;
     align-self: flex-end;
-    border-radius: 10px;
+    border-radius: 10px 10px 10px 2px;
     background-color: var(--White);
     color: var(--Desaturated_Dark_Violet);
 }
 .img>img{
     border-radius: 10%;
     width: 18%;
-    margin-left: 10px;
+    margin: 5px 0 0 5px;
     float: right;
 }
 .btndiv{
     display: flex;
     padding: 7.5px;
     margin: 5px;
+    width:70%;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.1rem;
     background-image: linear-gradient(90deg,var(--Light_Magenta),var(--Light_Violet));;
 }
 .msg-box{
+    margin: 5px;
+    border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -131,4 +159,23 @@ body{
 }
 .adverttext{
     width:40vw;
+    font-weight: 400;
+}
+@media screen and (width<=400px) {
+    .adverttext
+    {
+        text-align: center;
+        width: auto;
+        padding: 1rem;
+    }
+}
+.advertheading{
+    font-size: 2rem;
+    font-weight: 700;
+    margin:0 0 1rem 0;
+}
+.advertdesc{
+    color: var(--Dark_Grayish_Violet);
+    font-weight: 500;
+    line-height: 1.3;
 }
