@@ -20,8 +20,13 @@
 }
 body{
     background-color: var(--Light_Grayish_Violet);
-    /*height: 100vh;*/
     overflow: hidden;
+}
+@media screen and (width<=400px){
+    body{
+        position: relative;
+        overflow: auto;
+    }
 }
 .rightshape{
     height: 85vh;
@@ -64,7 +69,7 @@ body{
 }
 .border{
     position: relative;
-    width: 18rem;
+    width: 17rem;
     padding: 0.8rem;
     border-radius: 25px;
     background-color: var(--White);
@@ -73,8 +78,9 @@ body{
 }
 @media screen and (width<=400px) {
     .border{
+        margin-top: 3rem;
         display: flex;
-        width:90%;
+        width:70%;
         height: auto;
         flex-flow: column nowrap;
     }
@@ -102,12 +108,17 @@ body{
     padding: 30px 10px 10px 10px;
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
     background-image: linear-gradient(90deg,var(--Light_Violet),var(--Light_Magenta));
 }
-.card-header img{
+.card-header>#back-icon{
+    height:0.8rem;
+}
+.card-header .img{
     border-radius: 50%;
     width:10%;
     height: auto;
+    margin: 0px 0.5rem;
 }
 .cardchat{
     display: flex;
@@ -118,7 +129,7 @@ body{
     width: 60%;
     padding: 0.5rem;
     align-self: flex-start;
-    border-radius: 10px;
+    border-radius: 10px 10px 10px 2px;
     background-color: var(--Grayish_Blue);
     color: var(--Moderate_Violet);
 }
@@ -127,7 +138,7 @@ body{
     width: 60%;
     padding: 0.5rem;
     align-self: flex-end;
-    border-radius: 10px 10px 10px 2px;
+    border-radius: 10px 10px 2px 10px;
     background-color: var(--White);
     color: var(--Desaturated_Dark_Violet);
 }
@@ -139,14 +150,31 @@ body{
 }
 .btndiv{
     display: flex;
-    padding: 7.5px;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
     margin: 5px;
     width:70%;
     border-radius: 0.5rem 0.5rem 0.5rem 0.1rem;
-    background-image: linear-gradient(90deg,var(--Light_Magenta),var(--Light_Violet));;
+    background-image: linear-gradient(90deg,var(--Light_Magenta),var(--Light_Violet));
+}
+.btndiv section{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.btndiv img{
+    padding: 0 0.5rem 0 0.5rem;
+    height: 1rem;
+}
+.btndiv>p:last-of-type {
+    padding: 7.5px;
+    font-size: 150%;
+    font-weight: 500;
+    color: var(--White);
 }
 .msg-box{
-    margin: 5px;
+    margin: 5px 5px 8px 5px;
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -154,19 +182,22 @@ body{
     background-color: var(--White );
     color: var(--Grayish_Blue);
 }
+.msg-box>p{
+    padding: 0 0 0 0.5rem;
+}
 .msg-box img{
     width:35px;
 }
 .adverttext{
-    width:40vw;
+    width:32vw;
     font-weight: 400;
 }
 @media screen and (width<=400px) {
     .adverttext
     {
+        padding: 3rem 2rem 3rem 2rem;
+        width: 100vw;
         text-align: center;
-        width: auto;
-        padding: 1rem;
     }
 }
 .advertheading{
@@ -178,4 +209,10 @@ body{
     color: var(--Dark_Grayish_Violet);
     font-weight: 500;
     line-height: 1.3;
+}
+@media screen and (width<=400px) {
+    .advertdesc
+    {
+        line-height: 1.75;
+    }
 }
