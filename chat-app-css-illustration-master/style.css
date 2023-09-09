@@ -20,12 +20,11 @@
 }
 body{
     background-color: var(--Light_Grayish_Violet);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 @media screen and (width<=400px){
     body{
         position: relative;
-        overflow: auto;
     }
 }
 .rightshape{
