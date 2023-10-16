@@ -35,8 +35,8 @@ body{
     border-radius: 15px;
 }
 button{
-    width: ;
-    height: ;
+    /*width: ;
+    height: ;*/
     background-color: var(--Orange);
     border-radius: 0.5*height;
 }
