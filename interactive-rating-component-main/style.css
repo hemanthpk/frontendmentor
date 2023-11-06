@@ -9,24 +9,46 @@
     --Orange: hsl(25, 97%, 53%);
     --White: hsl(0, 0%, 100%);
     --Light-Grey: hsl(217, 12%, 63%);
-    --Medium-Grey: hsl(216, 12%, 54%);
+    --Medium-Grey: hwb(216 49% 40%);
     --Dark-Blue: hsl(213, 19%, 18%);
     --Very-Dark-Blue: hsl(216, 12%, 8%);
-    --states-padding: 20px;
+    --states-padding: 25px 25px 30px 25px;
     --states-width: 350px;
 }
 body{
     height: 100vh;
     background-color: var(--Very-Dark-Blue);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 .state{
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-around;
     width: var(--states-width);
-    height: 350px;
+    height: auto;
     padding: var(--states-padding);
     background-color: var(--Dark-Blue);
     border-radius: 15px;
+}
+.state .bgcircle{
+    height: 2.5em;
+    width: 2.5em;
+    background-color: hsl(201, 15%, 19%);
+    border-radius: 50%;
+}
+.state .bgcircle svg{
+    position: relative;
+    top: 11px;
+    left: 11px;
+}
+.state h2:first-of-type{
+
+}
+.state p,span{
+    color: hsla(0, 0%, 100%, 0.5);
 }
 .rating-state{
     gap: 15px;
@@ -36,14 +58,18 @@ body{
     flex-flow: row wrap;
     color: var(--Light-Grey);
 }
+div.rating-buttons{
+    display: flex;
+    justify-content: space-around;
+}
 form input
 {
     appearance: none;
     margin: 0;
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
     border-radius: 50%;
-    background-color: var(--Medium-Grey);
+    background-color: hsl(201, 15%, 19%);
 }
 form input:checked{
     background-color: var(--White);
@@ -53,29 +79,45 @@ form input:checked+span{
 }
 form input+span{
     position: relative;
-    bottom: 8px;
-    right: 18px;
+    bottom: 14px;
+    right: 25px;
+    color: hsla(0, 0%, 100%, 0.5);
 }
-.bgcircle{
-    height: 30px;
-    width: 30px;
-    background-color: var(--Very-Dark-Blue);
-    border-radius: 15px;
-}
-button{
+form button{
     appearance: none;
-    background-color: var(--Orange);
-    height: 40px;
-    width: 310px;
+    height: 42px;
+    width: 100%;
+    background-color: hsla(25, 97%, 53%, 0.25);
+    margin: 15px 0 0 0;
     border: none;
     border-radius: 20px;
-
+    color: hsla(0, 0%, 100%,0.1);
+    letter-spacing: 3px;
+}
+form button:enabled{
+    background-color: hsla(25, 97%, 53%);
+    color: hsla(0, 0%, 100%);
 }
 .thankyou-state{
     display: none;
     align-items: center;
+    height: 353px;
+    gap: 20px}
+.thankyou-state p{
+    text-align: center;
+}
+.thankyou-state p:first-of-type,.thankyou-state span{
+    color:hsla(25, 97%, 53%, 0.75);
+    background-color: hsl(201, 15%, 19%);
+}
+.thankyou-state p:first-of-type{
+    padding: 8px 10px 8px 10px;
+    border-radius: 20px;
 }
 .attribution { 
-    font-size: 11px; text-align: center; }
+    position: absolute;
+    bottom: 0;
+    font-size: 11px;}
+
 .attribution a { 
     color: hsl(228, 45%, 44%); }
